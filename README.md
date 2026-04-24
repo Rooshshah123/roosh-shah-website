@@ -1,7 +1,5 @@
 # Roosh Shah — Personal Website & Resume
 
-![Portfolio Preview](https://roosh-shah-website.vercel.app/og-image.png) <!-- Replace with actual screenshot if you add one -->
-
 A clean, minimalist, single-page personal website & digital resume built to showcase my journey in **Electronics & Instrumentation Engineering**.
 
 Live at → **[https://roosh-shah-website.vercel.app](https://roosh-shah-website.vercel.app)**
