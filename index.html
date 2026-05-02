@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roosh Shah</title>
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,9 +33,7 @@
             cursor: none;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -47,14 +44,11 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- Minimalist Backdrop --- */
         body::before {
             content: "";
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background-image: url("https://grainy-gradients.vercel.app/noise.svg");
             opacity: 0.03;
             pointer-events: none;
@@ -62,11 +56,9 @@
             filter: invert(1);
         }
 
-        /* --- Custom Cursor --- */
         #cursor {
             position: fixed;
-            width: 5px;
-            height: 5px;
+            width: 5px; height: 5px;
             background: var(--text-primary);
             border-radius: 50%;
             pointer-events: none;
@@ -75,8 +67,7 @@
 
         #cursor-follower {
             position: fixed;
-            width: 35px;
-            height: 35px;
+            width: 35px; height: 35px;
             border: 0.5px solid rgba(0, 0, 0, 0.15);
             border-radius: 50%;
             pointer-events: none;
@@ -119,11 +110,9 @@
             transition: var(--transition);
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
+        .nav-links a:hover { color: var(--text-primary); }
 
-        /* --- Hero Section --- */
+        /* --- Hero --- */
         #hero {
             height: 100vh;
             display: flex;
@@ -133,15 +122,12 @@
             position: relative;
         }
 
-        /* Suble Red Glow behind Hero */
         #hero::before {
             content: "";
             position: absolute;
-            top: 40%;
-            left: 50%;
+            top: 40%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
+            width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(255, 0, 0, 0.04) 0%, transparent 70%);
             pointer-events: none;
             z-index: -1;
@@ -161,8 +147,7 @@
 
         .status-badge::before {
             content: "";
-            width: 5px;
-            height: 5px;
+            width: 5px; height: 5px;
             background: var(--accent);
             border-radius: 50%;
             box-shadow: 0 0 10px var(--accent);
@@ -185,10 +170,8 @@
             font-weight: 400;
         }
 
-        /* --- Layout Units --- */
-        .container {
-            padding: 0 10% 150px 10%;
-        }
+        /* --- Layout --- */
+        .container { padding: 0 10% 150px 10%; }
 
         .section-label {
             font-size: 0.6rem;
@@ -200,7 +183,7 @@
             margin-top: var(--spacing-unit);
         }
 
-        /* --- Premium Bento Cards --- */
+        /* --- Bento Cards --- */
         .bento-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -223,25 +206,14 @@
             transform-style: preserve-3d;
         }
 
-        .bento-item:hover {
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
-        }
+        .bento-item:hover { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05); }
 
-        .col-4 {
-            --span: 4;
-        }
-
-        .col-6 {
-            --span: 6;
-        }
-
-        .col-8 {
-            --span: 8;
-        }
-
-        .col-12 {
-            --span: 12;
-        }
+        .col-4  { --span: 4; }
+        .col-5  { --span: 5; }
+        .col-6  { --span: 6; }
+        .col-7  { --span: 7; }
+        .col-8  { --span: 8; }
+        .col-12 { --span: 12; }
 
         .item-meta {
             color: var(--accent);
@@ -269,7 +241,64 @@
             max-width: 500px;
         }
 
-        /* --- Toolkit Styles --- */
+        .item-date {
+            margin-top: 30px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #000;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* --- Bullet list for experience --- */
+        .item-bullets {
+            list-style: none;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .item-bullets li {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .item-bullets li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.8rem;
+        }
+
+        /* --- Project card variant --- */
+        .project-tag {
+            display: inline-block;
+            font-size: 0.58rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #000;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 100px;
+            padding: 4px 14px;
+            margin-bottom: 20px;
+        }
+
+        .project-stack {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #aaa;
+            text-transform: uppercase;
+        }
+
+        /* --- Toolkit --- */
         .toolkit-list {
             display: flex;
             flex-direction: column;
@@ -303,17 +332,14 @@
             transform: translateX(5px);
         }
 
-        /* --- Cinematic Reveals --- */
+        /* --- Reveals --- */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
         /* --- Contact --- */
         #contact {
@@ -349,9 +375,7 @@
             transition: 0.3s;
         }
 
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
+        .footer-links a:hover { color: var(--text-primary); }
 
         footer {
             padding: 100px 0;
@@ -362,28 +386,181 @@
             background: #fafafa;
         }
 
+        /* ── Hamburger button ── */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+        /* ── Mobile nav drawer ── */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-family: 'Extenda 30 Deca', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .mobile-menu a:hover { color: var(--accent); }
+
+        /* ── Tablet ── */
         @media (max-width: 1100px) {
-            .nav-links {
-                display: none;
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .mobile-menu { display: flex; }
+
+            .col-4, .col-5, .col-6, .col-7, .col-8 { --span: 12; }
+            .bento-item { padding: 44px 36px; }
+            #hero { padding: 0 6%; }
+            .hero-title { font-size: 5rem; }
+
+            .container { padding: 0 6% 100px 6%; }
+
+            .footer-links { gap: 30px; flex-wrap: wrap; }
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 600px) {
+            * { cursor: auto !important; }
+            #cursor, #cursor-follower { display: none; }
+
+            nav {
+                top: 16px;
+                padding: 10px 20px;
+                gap: 16px;
             }
 
-            .col-4,
-            .col-6,
-            .col-8 {
-                --span: 12;
-            }
-
-            .bento-item {
-                padding: 50px 30px;
-            }
+            .col-4, .col-5, .col-6, .col-7, .col-8, .col-12 { --span: 12; }
 
             #hero {
-                padding: 0 6%;
+                padding: 0 5%;
+                height: auto;
+                min-height: 100svh;
+                padding-top: 100px;
+                padding-bottom: 60px;
+                justify-content: flex-end;
             }
 
             .hero-title {
-                font-size: 5rem;
+                font-size: clamp(3.5rem, 17vw, 5.5rem);
+                margin-bottom: 30px;
+                line-height: 0.85;
             }
+
+            .hero-tag {
+                font-size: 0.95rem;
+                line-height: 1.65;
+            }
+
+            .status-badge {
+                font-size: 0.5rem;
+                letter-spacing: 0.3em;
+                margin-bottom: 20px;
+            }
+
+            .container { padding: 0 5% 80px 5%; }
+
+            .section-label {
+                font-size: 0.55rem;
+                letter-spacing: 0.5em;
+                margin-bottom: 30px;
+            }
+
+            .bento-grid { gap: 16px; }
+
+            .bento-item {
+                padding: 32px 24px;
+                border-radius: 20px;
+            }
+
+            .item-title {
+                font-size: 1.8rem;
+                margin-bottom: 16px;
+            }
+
+            .item-text { font-size: 0.95rem; }
+
+            .item-bullets li { font-size: 0.88rem; }
+
+            .item-date {
+                font-size: 0.6rem;
+                margin-top: 20px;
+            }
+
+            #contact {
+                padding: 100px 6%;
+            }
+
+            .contact-title {
+                font-size: clamp(2.5rem, 12vw, 5rem);
+                margin-bottom: 40px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .footer-links a {
+                font-size: 0.85rem;
+            }
+
+            footer { padding: 50px 0; }
+
+            .skill-list { gap: 14px 30px; }
+            .skill-link { font-size: 0.9rem; }
+
+            .mobile-menu a { font-size: 2rem; }
+        }
+
+        /* ── Very small phones ── */
+        @media (max-width: 380px) {
+            .hero-title { font-size: 3rem; }
+            .bento-item { padding: 26px 18px; }
+            .item-title { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -396,24 +573,39 @@
     <nav>
         <div class="nav-links">
             <a href="#hero">Start</a>
-            <a href="#mastery">Mastery</a>
+            <a href="#mastery">Foundation</a>
             <a href="#impact">Impact</a>
+            <a href="#projects">Projects</a>
             <a href="#toolkit">Tools</a>
             <a href="#contact">Reach</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero"     onclick="closeMobile()">Start</a>
+        <a href="#mastery"  onclick="closeMobile()">Foundation</a>
+        <a href="#impact"   onclick="closeMobile()">Impact</a>
+        <a href="#projects" onclick="closeMobile()">Projects</a>
+        <a href="#toolkit"  onclick="closeMobile()">Tools</a>
+        <a href="#contact"  onclick="closeMobile()">Reach</a>
+    </div>
+
+    <!-- HERO -->
     <section id="hero">
-        <div class="status-badge reveal">Entry Level • Available May 2026</div>
-        <a href="https://drive.google.com/file/d/1AQBTeQ7g2sWXQZlRFVAdhUI0SqYmqoiK/view?usp=sharing" target="_blank"
+        <div class="status-badge reveal">E&I Engineer · Graduating Aug 2026 · Available Now</div>
+        <a href="https://drive.google.com/file/d/1Ph__TazpBDei0U-siDx5citnyda3qrJr/view?usp=sharing" target="_blank"
             style="text-decoration: none; color: inherit;">
             <h1 class="hero-title reveal">ROOSH <br> SHAH.</h1>
         </a>
-        <p class="hero-tag reveal">Architecting the bridge between high-precision hardware engineering, intelligent
-            autonomous systems, and modern web architectures.</p>
+        <p class="hero-tag reveal">Bare-metal firmware & embedded systems. AI tool integration & automation pipelines. B2B/B2C marketing & sales leadership. Production-grade hardware to client-facing digital products — end to end.</p>
     </section>
 
     <div class="container">
+
+        <!-- 01 FOUNDATION -->
         <span class="section-label">01 / THE FOUNDATION</span>
         <section id="mastery">
             <div class="bento-grid">
@@ -421,83 +613,174 @@
                     <div class="bento-item">
                         <span class="item-meta">Mastery</span>
                         <h3 class="item-title">B.Tech at Nirma University</h3>
-                        <p class="item-text">Electronics & Instrumentation. Engineering systems that bridge physical
-                            mechanics with digital logic. Specializing in autonomous architectures.</p>
-                        <p
-                            style="margin-top: 40px; font-size: 0.75rem; font-weight: 700; color: #000; letter-spacing: 0.1em;">
-                            CLASS OF 2026</p>
+                        <p class="item-text">Electronics & Instrumentation Engineering with a Minor in Cyber Physical Systems. Engineering systems that bridge physical mechanics with digital logic — specializing in embedded architectures and sensor integration.</p>
+                        <p class="item-date">CGPA: 7.3 / 10 &nbsp;·&nbsp; Class of Aug 2026</p>
                     </div>
                 </div>
                 <div class="bento-card-wrap col-4 reveal">
                     <div class="bento-item">
-                        <span class="item-meta">Merit</span>
-                        <h3 class="item-title">Academic Prowess</h3>
+                        <span class="item-meta">Academic Merit</span>
+                        <h3 class="item-title">Board Scores</h3>
                         <div style="margin-top: 40px;">
-                            <p style="font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em;">89.0 <span
-                                    style="font-size: 0.6rem; color: #aaa; margin-left: 5px;">X</span></p>
-                            <p style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; letter-spacing: -0.02em;">
-                                82.2 <span style="font-size: 0.6rem; color: #aaa; margin-left: 5px;">XII</span></p>
+                            <p style="font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em;">89.0 <span style="font-size: 0.6rem; color: #aaa; margin-left: 5px;">X</span></p>
+                            <p style="font-size: 1.8rem; font-weight: 800; margin-top: 15px; letter-spacing: -0.02em;">82.2 <span style="font-size: 0.6rem; color: #aaa; margin-left: 5px;">XII</span></p>
                         </div>
                     </div>
                 </div>
+                <div class="bento-card-wrap col-4 reveal">
+                    <div class="bento-item">
+                        <span class="item-meta">Classical Arts</span>
+                        <h3 class="item-title">Tabla Visharad</h3>
+                        <p class="item-text">ABGMV Classical Music Proficiency. Formal graded certification in Indian classical percussion.</p>
+                    </div>
+                </div>
+                <div class="bento-card-wrap col-8 reveal">
+                    <div class="bento-item">
+                        <span class="item-meta">Leadership</span>
+                        <h3 class="item-title">VP @ ISTE,<br>Nirma University</h3>
+                        <p class="item-text">Directed professional summits and technical logistics for large-scale engineering workshops. Organised IFEST with 500+ participants. Led GTM campaigns, speaker acquisition, and social media outreach.</p>
+                        <p class="item-date">Jan 2025 – Jan 2026</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- 02 IMPACT -->
         <span class="section-label">02 / STRATEGIC IMPACT</span>
         <section id="impact">
             <div class="bento-grid">
-                <div class="bento-card-wrap col-6 reveal">
+
+                <div class="bento-card-wrap col-12 reveal">
                     <div class="bento-item">
                         <span class="item-meta">Current Mission</span>
-                        <h3 class="item-title">Sixth Energy <br> Technology</h3>
-                        <p class="item-text">Integrating thermal vision ecosystems with high-fidelity PCB design and
-                            advanced sensor networks in Bengaluru.</p>
+                        <h3 class="item-title">Sixth Energy Technology &nbsp;<span style="font-size:1.2rem; color:#aaa;">· Bangalore</span></h3>
+                        <ul class="item-bullets">
+                            <li>Built production-grade FLIR Lepton 3.5 LWIR thermal camera driver for Renesas RA6M3 — full VoSPI protocol, CCI/I²C control interface, VSYNC-based frame sync & DMA-SPI pipeline with zero third-party dependencies.</li>
+                            <li>Implemented Raw14→RGB888 colormap pipeline & lwIP UDP Ethernet streaming over DP83620 PHY to deliver live thermal video to host PC.</li>
+                            <li>Developed power sequencing routines, hardware reset logic & SPI clock configuration; systematically debugged hardware-software integration with R&D team.</li>
+                        </ul>
+                        <p class="item-date">Embedded Systems Intern &nbsp;·&nbsp; Jan 2026 – Apr 2026</p>
                     </div>
                 </div>
+
                 <div class="bento-card-wrap col-6 reveal">
                     <div class="bento-item">
                         <span class="item-meta">Business Logic</span>
-                        <h3 class="item-title">Aktiv <br> Software</h3>
-                        <p class="item-text">Architecting large-scale manufacturing intelligence modules and optimizing
-                            complex database architectures.</p>
+                        <h3 class="item-title">Aktiv<br>Software</h3>
+                        <ul class="item-bullets">
+                            <li>Implemented Odoo CRM, Sales & Marketing modules for multiple B2B clients — configuring lead pipelines, automated follow-up workflows, email marketing templates & SQL/Python-based marketing triggers.</li>
+                            <li>Built data-driven campaign tracking infrastructure; managed parallel client deployments via Git across diverse client stacks.</li>
+                        </ul>
+                        <p class="item-date">Software Developer Intern — CRM & Automation &nbsp;·&nbsp; May – Jul 2025</p>
                     </div>
                 </div>
-                <div class="bento-card-wrap col-12 reveal">
+
+                <div class="bento-card-wrap col-6 reveal">
                     <div class="bento-item">
-                        <span class="item-meta">Leadership Authority</span>
-                        <h3 class="item-title">VP @ ISTE</h3>
-                        <p class="item-text">Directing professional summits and technical logistics for large-scale
-                            engineering workshops and global partnerships.</p>
+                        <span class="item-meta">Sales & Marketing</span>
+                        <h3 class="item-title">The FIRST<br>· Ahmedabad</h3>
+                        <ul class="item-bullets">
+                            <li>Led B2B/B2C client acquisition, brand positioning & on-ground sales for a construction firm — managing full lead pipeline, deal closure & marketing collateral in high-value real estate.</li>
+                            <li>Developed promotional strategies, digital presence & customer outreach campaigns bridging technical product knowledge with customer-facing communication.</li>
+                        </ul>
+                        <p class="item-date">Marketing & Sales Head &nbsp;·&nbsp; Nov 2025 – Jan 2026</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <span class="section-label">03 / THE TOOLKIT</span>
+        <!-- 03 PROJECTS -->
+        <span class="section-label">03 / SELECTED PROJECTS</span>
+        <section id="projects">
+            <div class="bento-grid">
+
+                <div class="bento-card-wrap col-8 reveal">
+                    <div class="bento-item">
+                        <span class="project-tag">In Progress</span>
+                        <h3 class="item-title">CircuitForge<br>AI EDA App</h3>
+                        <p class="item-text">Full EDA desktop built from scratch — PyOpenGL renderer, Electron/React frontend, WebSocket JSON-RPC IPC bridge & Claude API for AI-assisted component suggestions. Zero KiCad dependency.</p>
+                        <p class="project-stack">Python · PyOpenGL · Electron · React · Claude API · SQLite</p>
+                    </div>
+                </div>
+
+                <div class="bento-card-wrap col-4 reveal">
+                    <div class="bento-item">
+                        <span class="project-tag">2025</span>
+                        <h3 class="item-title">SMPS<br>PCB Design</h3>
+                        <p class="item-text">Switched Mode Power Supply PCB from schematic to routed layout — component placement, trace width calculation & DRC sign-off for production-ready board.</p>
+                        <p class="project-stack">KiCad · Hardware Design</p>
+                    </div>
+                </div>
+
+                <div class="bento-card-wrap col-4 reveal">
+                    <div class="bento-item">
+                        <span class="project-tag">2025</span>
+                        <h3 class="item-title">3D Interactive<br>Website</h3>
+                        <p class="item-text">Immersive 3D client website for a construction company with scroll-driven animations — full lifecycle from briefing, UX wireframing & development through final client handoff.</p>
+                        <p class="project-stack">Three.js · JavaScript · HTML/CSS</p>
+                    </div>
+                </div>
+
+                <div class="bento-card-wrap col-4 reveal">
+                    <div class="bento-item">
+                        <span class="project-tag">2025</span>
+                        <h3 class="item-title">Marketing<br>Automation</h3>
+                        <p class="item-text">YouTube content automation pipeline & StartupIndia competitive intelligence scraper enabling scalable content ops and B2B demand generation workflows.</p>
+                        <p class="project-stack">n8n · JavaScript · Web APIs</p>
+                    </div>
+                </div>
+
+                <div class="bento-card-wrap col-4 reveal">
+                    <div class="bento-item">
+                        <span class="project-tag">Jul – Nov 2025</span>
+                        <h3 class="item-title">Digital Twin<br>Energy</h3>
+                        <p class="item-text">Predictive ML models on real-world smart building energy data with anomaly detection — groundwork for a real-time Digital Twin control and monitoring framework.</p>
+                        <p class="project-stack">Python · scikit-learn · Pandas</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 04 TOOLKIT -->
+        <span class="section-label">04 / THE TOOLKIT</span>
         <section id="toolkit">
             <div class="bento-grid">
                 <div class="bento-card-wrap col-12 reveal">
                     <div class="bento-item">
                         <div class="toolkit-list">
                             <div class="skill-group">
-                                <h4>Engineering Infrastructure</h4>
+                                <h4>Embedded & Hardware</h4>
                                 <div class="skill-list">
-                                    <span class="skill-link">KiCad Mastery</span>
-                                    <span class="skill-link">OrCAD Ecosystem</span>
                                     <span class="skill-link">Embedded C</span>
-                                    <span class="skill-link">RTOS</span>
-                                    <span class="skill-link">UART/SPI/I2C/CAN</span>
+                                    <span class="skill-link">Renesas RA6M3</span>
+                                    <span class="skill-link">ESP32 · STM32</span>
+                                    <span class="skill-link">SPI / I²C / UART / CAN</span>
+                                    <span class="skill-link">DMA · VoSPI</span>
+                                    <span class="skill-link">FLIR Lepton 3.5</span>
+                                    <span class="skill-link">KiCad PCB</span>
+                                    <span class="skill-link">LTspice</span>
                                 </div>
                             </div>
                             <div class="skill-group">
-                                <h4>Computational Strategy</h4>
+                                <h4>Programming & AI</h4>
                                 <div class="skill-list">
-                                    <span class="skill-link">Python Architecture</span>
-                                    <span class="skill-link">C++ Development</span>
-                                    <span class="skill-link">SQL Optimization</span>
-                                    <span class="skill-link">n8n Automation</span>
-                                    <span class="skill-link">Web Architecture</span>
-                                    <span class="skill-link">AI Integration</span>
+                                    <span class="skill-link">Python · C/C++ · JavaScript</span>
+                                    <span class="skill-link">SQL · MATLAB · LabVIEW</span>
+                                    <span class="skill-link">Claude API · OpenAI API</span>
+                                    <span class="skill-link">scikit-learn · NumPy · Pandas</span>
+                                    <span class="skill-link">React · Electron · Three.js</span>
+                                </div>
+                            </div>
+                            <div class="skill-group">
+                                <h4>Marketing & Tools</h4>
+                                <div class="skill-list">
+                                    <span class="skill-link">n8n Workflow Automation</span>
+                                    <span class="skill-link">PostgreSQL · Git</span>
+                                    <span class="skill-link">Content Creation</span>
+                                    <span class="skill-link">Video Editing</span>
+                                    <span class="skill-link">MS Office</span>
                                 </div>
                             </div>
                         </div>
@@ -505,16 +788,18 @@
                 </div>
             </div>
         </section>
+
     </div>
 
+    <!-- CONTACT -->
     <section id="contact">
         <h2 class="contact-title reveal">Connect with me</h2>
         <div class="footer-links reveal">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rooshshah.work@gmail.com" target="_blank">Gmail</a>
-            <a href="https://linkedin.com/in/roosh-shah" target="_blank">LinkedIn</a>
+            <a href="mailto:rooshshah001@gmail.com" target="_blank">Gmail</a>
+            <a href="https://www.linkedin.com/in/roosh-shah/" target="_blank">LinkedIn</a>
             <a href="https://github.com/Rooshshah123" target="_blank">GitHub</a>
-            <a href="https://drive.google.com/file/d/1AQBTeQ7g2sWXQZlRFVAdhUI0SqYmqoiK/view?usp=sharing"
-                target="_blank">Resume</a>
+            <a href="https://www.instagram.com/roosh_shah315/" target="_blank">Instagram</a>
+            <a href="https://drive.google.com/file/d/1Ph__TazpBDei0U-siDx5citnyda3qrJr/view?usp=sharing" target="_blank">Resume</a>
         </div>
     </section>
 
@@ -526,44 +811,61 @@
         const cursor = document.getElementById('cursor');
         const follower = document.getElementById('cursor-follower');
 
+        // Hide cursor on touch devices
+        const isTouch = window.matchMedia('(hover: none)').matches;
+        if (isTouch) {
+            cursor.style.display = 'none';
+            follower.style.display = 'none';
+        }
+
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
-
             setTimeout(() => {
                 follower.style.left = e.clientX - 17.5 + 'px';
                 follower.style.top = e.clientY - 17.5 + 'px';
             }, 60);
         });
 
-        // --- 3D Tilt Effect ---
-        const cards = document.querySelectorAll('.bento-item');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = (y - centerY) / 25;
-                const rotateY = (centerX - x) / 25;
-
-                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        // 3D tilt — desktop only
+        if (!isTouch) {
+            const cards = document.querySelectorAll('.bento-item');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 25;
+                    const rotateY = (centerX - x) / 25;
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateY(0px)';
+                });
             });
+        }
 
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'rotateX(0deg) rotateY(0deg) translateY(0px)';
-            });
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
         });
 
-        // --- Reveal Observer ---
+        function closeMobile() {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
 
